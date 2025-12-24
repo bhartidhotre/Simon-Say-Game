@@ -45,7 +45,7 @@ function checkAns(idx) {
             setTimeout(levelUp,1000);
         }
     } else {
-        h2.innerText = `Game over! Highest score is (). Your score was ${level}. Press any key to start.`;  // hw - highes score print it 
+        h2.innerText = `Game over! Your score was ${level}. Press any key to start.`;  // hw - highes score print it 
 
         document.querySelector("body").style.backgroundColor = "red";
         setTimeout(function() {
