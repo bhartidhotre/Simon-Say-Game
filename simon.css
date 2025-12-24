@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2rem;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Button Colors */
+.red {
+    background: radial-gradient(circle, #ff6b81, #d63031);
+}
+
+.yellow {
+    background: radial-gradient(circle, #ffeaa7, #fbc531);
+}
+
+.green {
+    background: radial-gradient(circle, #55efc4, #00b894);
+}
+
+.purple {
+    background: radial-gradient(circle, #74b9ff, #6c5ce7);
+}
+
+/* Hover & Click Effects */
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Flash Animation */
+.flash {
+    background: white !important;
+}
+
+/* Game Over Effect */
+.gameOver {
+    background: #ff4757 !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .btn-container {
+        grid-template-columns: repeat(2, 140px);
+    }
+
+    .btn {
+        width: 140px;
+        height: 140px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
